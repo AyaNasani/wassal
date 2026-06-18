@@ -10,11 +10,14 @@ export default function Notifications() {
   const { token, user } = useAuth();
   const [notifications, setNotifications] = useState([]);
 
-  useEffect(() => {
+useEffect(() => {
   if (!user) return;
-  fetchNotifications();
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const load = async () => {
+    await fetchNotifications();
+  };
+
+  load();
 }, [user]);
 
   const fetchNotifications = async () => {

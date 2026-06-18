@@ -80,7 +80,7 @@ export default function AddProduct() {
   // ✅ تحقق من رقم الهاتف
   const validatePhone = (phone) => {
     // إزالة المسافات والشرطات
-    const cleanPhone = phone.replace(/[\s-]/g, '');
+  const cleanPhone = phone.replace(new RegExp("[\\s-]", "g"), ''); 
     
     // رقم سوري: يبدأ بـ 09 و 10 أرقام
     const syrianPhone = /^09\d{8}$/;
