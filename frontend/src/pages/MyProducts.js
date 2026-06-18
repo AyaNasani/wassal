@@ -72,16 +72,7 @@ export default function MyProducts() {
     }
   };
 
-  const getStatusColor = (status) => {
-    switch(status) {
-      case 'sold': return 'error';
-      case 'borrowed': return 'warning';
-      case 'donated': return 'info';
-      case 'approved': return 'success';
-      case 'pending': return 'default';
-      default: return 'default';
-    }
-  };
+
 
   return (
     <Container sx={{ py: 4 }}>
